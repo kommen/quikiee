@@ -138,12 +138,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 217197329;
-			PBXWorkspaceStateSaveDate = 217197329;
+			PBXPerProjectTemplateStateSaveDate = 217199215;
+			PBXWorkspaceStateSaveDate = 217199215;
 		};
 		perUserProjectItems = {
-			50C12BC70CEB9A0F00BA7028 = 50C12BC70CEB9A0F00BA7028 /* PBXBookmark */;
-			50C12C010CEDA3E900BA7028 = 50C12C010CEDA3E900BA7028 /* PBXTextBookmark */;
+			5085F51C0CF2324200166854 = 5085F51C0CF2324200166854 /* PBXBookmark */;
+			5085F51F0CF2325D00166854 = 5085F51F0CF2325D00166854 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 50C12B7E0CEB8E7900BA7028 /* Source Control */;
 		userBuildSettings = {
@@ -155,6 +155,14 @@
 			sepNavSelRange = "{436, 0}";
 			sepNavVisRange = "{0, 587}";
 			sepNavWindowFrame = "{{34, 75}, {1177, 703}}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* quickiee_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 575}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 147}";
+			sepNavWindowFrame = "{{15, 70}, {1177, 703}}";
 		};
 	};
 	5085F4FB0CF22CCE00166854 /* quickiee */ = {
@@ -186,6 +194,20 @@
 		sourceDirectories = (
 		);
 	};
+	5085F51C0CF2324200166854 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+	};
+	5085F51F0CF2325D00166854 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 18";
+		rLen = 0;
+		rLoc = 436;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 0;
+	};
 	50C12B7E0CEB8E7900BA7028 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
@@ -204,19 +226,5 @@
 			sepNavVisRange = "{125, 1349}";
 			sepNavWindowFrame = "{{10, 176}, {750, 558}}";
 		};
-	};
-	50C12BC70CEB9A0F00BA7028 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 50C12BBE0CEB99D500BA7028 /* NSImage+QuickLook.m */;
-	};
-	50C12C010CEDA3E900BA7028 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 50C12BBE0CEB99D500BA7028 /* NSImage+QuickLook.m */;
-		name = "NSImage+QuickLook.m: 16";
-		rLen = 0;
-		rLoc = 386;
-		rType = 0;
-		vrLen = 1406;
-		vrLoc = 125;
 	};
 }

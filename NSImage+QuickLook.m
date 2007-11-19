@@ -10,7 +10,6 @@
 
 @implementation NSImage (QuickLook)
 
-
 + (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)icon
 {
     NSURL *fileURL = [NSURL fileURLWithPath:path];
@@ -26,9 +25,6 @@
                                             (CFDictionaryRef)dict);
     
     if (ref != NULL) {
-        // Take advantage of NSBitmapImageRep's -initWithCGImage: initializer, new in Leopard,
-        // which is a lot more efficient than copying pixel data into a brand new NSImage.
-        // Thanks to Troy Stephens @ Apple for pointing this new method out to me.
         NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithCGImage:ref];
         NSImage *newImage = nil;
         if (bitmapImageRep) {
@@ -52,6 +48,5 @@
     
     return nil;
 }
-
 
 @end
