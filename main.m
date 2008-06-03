@@ -2,8 +2,9 @@
 //  main.m
 //  quickiee
 //
-//  Created by Dieter Komendera on 11/14/07.
-//
+//  Created by Dieter Komendera on 11/14/07. http://komendera.com
+//  Licence: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+//  http://sam.zoy.org/wtfpl/COPYING
 
 #import <Cocoa/Cocoa.h>
 #import <QuickLook/QuickLook.h>
@@ -32,7 +33,7 @@
     if(argc >= 5) {
         format = [NSString stringWithUTF8String:argv[4]];
     } else {
-        format = @"jpg";
+        format = @"png";
     }
     
 	NSImage *image = [NSImage imageWithPreviewOfFileAtPath:srcfile
@@ -42,7 +43,7 @@
     NSBitmapImageRep *rep = [[image representations] objectAtIndex: 0];
     
     NSData *data;
-    if([format caseInsensitiveCompare:@"jpg"] == 0) {
+    if([format caseInsensitiveCompare:@"png"] == 0) {
         data =  [rep representationUsingType: NSJPEGFileType properties: nil];
     } else if([format caseInsensitiveCompare:@"tiff"] == 0) {
         data = [rep representationUsingType: NSTIFFFileType properties: nil];
@@ -50,8 +51,13 @@
         data = [rep representationUsingType: NSBMPFileType properties: nil];
     } else if([format caseInsensitiveCompare:@"gif"] == 0) {
         data = [rep representationUsingType: NSGIFFileType properties: nil];
-    } else {
+    } else if([format caseInsensitiveCompare:@"jpg"] == 0){
         data = [rep representationUsingType: NSPNGFileType properties: nil];
+    } else {
+        printf("unknown format: ");
+        printf([format UTF8String]);
+        printf("\n");
+        return -1;
     }
     [data writeToFile: dstfile atomically: NO];
 
