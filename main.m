@@ -12,12 +12,13 @@
 
  int main(int argc, char *argv[])
  {
+   NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
     if(argc < 3) {
         return -1;
     }
 	NSString *srcfile = [[NSString stringWithUTF8String: argv[1]] stringByExpandingTildeInPath];
     NSString *dstfile = [[NSString stringWithUTF8String: argv[2]] stringByExpandingTildeInPath];
-
 
     NSSize dstsize;
     if(argc >= 4) {
@@ -39,6 +40,7 @@
 	NSImage *image = [NSImage imageWithPreviewOfFileAtPath:srcfile
 		ofSize:dstsize
 		asIcon:NO];
+   
 	
     NSBitmapImageRep *rep = [[image representations] objectAtIndex: 0];
     
@@ -61,5 +63,6 @@
     }
     [data writeToFile: dstfile atomically: NO];
 
+    [pool release];
  	return 0;	
  }
