@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 
   NSData *data;
   if([format caseInsensitiveCompare:@"png"] == 0) {
-      data =  [rep representationUsingType: NSJPEGFileType properties: nil];
+      data =  [rep representationUsingType: NSPNGFileType properties: nil];
   } else if([format caseInsensitiveCompare:@"tiff"] == 0) {
       data = [rep representationUsingType: NSTIFFFileType properties: nil];
   } else if([format caseInsensitiveCompare:@"bmp"] == 0) {
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
   } else if([format caseInsensitiveCompare:@"gif"] == 0) {
       data = [rep representationUsingType: NSGIFFileType properties: nil];
   } else if([format caseInsensitiveCompare:@"jpg"] == 0){
-      data = [rep representationUsingType: NSPNGFileType properties: nil];
+      data = [rep representationUsingType: NSJPEGFileType properties: nil];
   } else {
     printf("unknown format: ");
     printf([format UTF8String]);
